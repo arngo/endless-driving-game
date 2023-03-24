@@ -40,8 +40,7 @@ Obstacle* spawnObstacle()
 	// Offset = 0
 	// Range = 1281
 	x = 0 + (rand() % SCREEN_WIDTH + 1);
-    Obstacle o(Rectangle{x, 200.0f, 128.0f, 128.0f}, 3, "./resources/asteroid.png");
-    return &o;
+    return new Obstacle(Rectangle{x, 200.0f, 128.0f, 128.0f}, 3, "./resources/asteroid.png");
 }
 
 Obstacle* checkObstacleCollisions(Player &player, std::vector<Obstacle*> &obstacles) {
